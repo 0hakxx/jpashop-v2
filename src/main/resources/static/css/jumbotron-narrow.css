@@ -1,0 +1,189 @@
+/* =========================
+   GLOBAL RESET & BASE
+========================= */
+body {
+    font-family: "Inter", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+    background:
+            radial-gradient(1200px at 20% -10%, rgba(56,189,248,0.15), transparent 40%),
+            radial-gradient(900px at 80% 10%, rgba(99,102,241,0.12), transparent 45%),
+            linear-gradient(180deg, #020617 0%, #020617 100%);
+    color: #e5e7eb;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    color: #38bdf8;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+a:hover {
+    color: #a5f3fc;
+    text-shadow: 0 0 12px rgba(56,189,248,0.6);
+}
+
+/* =========================
+   CONTAINER (넓고 묵직)
+========================= */
+.container {
+    max-width: 1280px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    padding: 32px 0;
+    margin-bottom: 64px;
+    border-bottom: 1px solid rgba(148,163,184,0.12);
+}
+
+.header h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: #f8fafc;
+}
+
+/* =========================
+   JUMBOTRON / HERO
+========================= */
+.jumbotron {
+    background:
+            linear-gradient(180deg, rgba(15,23,42,0.95), rgba(2,6,23,0.95));
+    border-radius: 20px;
+    padding: 96px 80px;
+    margin-bottom: 96px;
+    box-shadow:
+            0 30px 80px rgba(0,0,0,0.85),
+            inset 0 0 0 1px rgba(56,189,248,0.15);
+}
+
+.jumbotron h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -1.2px;
+    margin-bottom: 28px;
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.jumbotron p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    max-width: 760px;
+    color: #cbd5f5;
+    margin-bottom: 48px;
+}
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+.jumbotron .btn {
+    padding: 16px 36px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: #020617;
+    font-size: 1.05rem;
+    font-weight: 800;
+    border: none;
+    box-shadow:
+            0 0 0 rgba(0,0,0,0),
+            0 18px 40px rgba(56,189,248,0.45);
+    transition: all 0.25s ease;
+}
+
+.jumbotron .btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+            0 25px 60px rgba(99,102,241,0.65),
+            0 0 25px rgba(56,189,248,0.8);
+}
+
+/* =========================
+   TABLE = ADMIN CARD TABLE
+========================= */
+.table {
+    margin-top: 48px;
+    border-collapse: separate;
+    border-spacing: 0 18px;
+}
+
+/* HEADER */
+.table thead th {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    padding-bottom: 20px;
+    border: none;
+}
+
+/* ROW */
+.table tbody tr {
+    background:
+            linear-gradient(180deg, rgba(15,23,42,0.9), rgba(2,6,23,0.95));
+    box-shadow:
+            0 12px 40px rgba(0,0,0,0.8),
+            inset 0 0 0 1px rgba(148,163,184,0.08);
+    transition: all 0.25s ease;
+}
+
+.table tbody tr:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow:
+            0 25px 60px rgba(0,0,0,0.9),
+            inset 0 0 0 1px rgba(56,189,248,0.35);
+}
+
+/* CELL */
+.table td {
+    padding: 26px 28px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+}
+
+/* ROUND */
+.table tbody tr td:first-child {
+    border-radius: 16px 0 0 16px;
+}
+
+.table tbody tr td:last-child {
+    border-radius: 0 16px 16px 0;
+}
+
+/* =========================
+   ACTION BUTTON
+========================= */
+.table .btn {
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    background: transparent;
+    color: #38bdf8;
+    border: 1px solid rgba(56,189,248,0.4);
+}
+
+.table .btn:hover {
+    background: rgba(56,189,248,0.15);
+    box-shadow: 0 0 18px rgba(56,189,248,0.6);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    margin-top: 160px;
+    padding: 48px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+    border-top: 1px solid rgba(148,163,184,0.12);
+}
