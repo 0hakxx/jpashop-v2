@@ -2,6 +2,7 @@ package jpabook.jpashop.repository;
 
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.*;
+import jpabook.jpashop.api.OrderApiController;
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderSearch;
@@ -97,5 +98,16 @@ public class OrderRepository {
         return em.createQuery("select o from Order o" +
                 " join fetch o.member m" +
                 " join fetch o.delivery d", Order.class).getResultList();
+    }
+
+    public List<Order> findAllWithItem() {
+        return em.createQuery("select DISTINCT o from Order o" +
+                " join fetch o.member m" +
+                " join fetch o.delivery d" +
+                " join fetch o.orderItems oi" +
+                " join fetch oi.item i", Order.class)
+                .setFirstResult(1)
+                .setMaxResults(100)
+                .getResultList();
     }
 }
